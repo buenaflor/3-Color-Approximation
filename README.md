@@ -3,7 +3,7 @@ Approximate if graph is 3-colorable in C using multiple processes (implementatio
 
 ## Supervisor - Generator
 
-The supervisor is in charge of setting up the shared memory and the semaphores and initializes the circular buffer in oder to communicate with the generators. It waits for the generators to write solutions to the circular buffer and reads and prints them.
+The supervisor is in charge of setting up the shared memory and the semaphores and initializes the circular buffer in order to communicate with the generators. It waits for the generators to write solutions to the circular buffer and reads and prints them.
 
 The generator program takes a graph as input and repeatedly generates a random solution for the 3-color problem and writes its result to the circular buffer. This procedure repeats until it is notified by the supervisor to terminate.
 
