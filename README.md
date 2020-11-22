@@ -7,6 +7,8 @@ The supervisor is in charge of setting up the shared memory and the semaphores a
 
 The generator program takes a graph as input and repeatedly generates a random solution for the 3-color problem and writes its result to the circular buffer. This procedure repeats until it is notified by the supervisor to terminate.
 
+The program will terminate upon CTRL-C or a solution with 0 edges have been found. In this case, the graph is 3-colorable.
+
 ### Usage
 
 Invocation of the supervisor:
