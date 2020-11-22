@@ -1,7 +1,11 @@
 # 3-Color-Approximation
 Approximate if graph is 3-colorable in C using multiple processes (implementation with semaphore and shared memory and circular buffer)
 
-# Supervisor - Generator
+## Supervisor - Generator
+
+The supervisor sets up the shared memory and the semaphores and initializes the circular buffer required
+for the communication with the generators. It then waits for the generators to write solutions to the
+circular buffer.
 
 The generator program takes a graph as input. The program repeatedly generates a random solution
 to the problem and writes its result to the circular buffer. It repeats this procedure until it is notified by the supervisor to terminate.
